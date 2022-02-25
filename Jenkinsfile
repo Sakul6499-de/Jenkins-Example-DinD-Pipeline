@@ -22,8 +22,10 @@ pipeline {
     }
     stages {
         stage('test') {
-            container('docker') {
-                sh 'docker info'
+            steps {
+                container('docker') {
+                    sh 'docker info'
+                }
             }
         }
     }
