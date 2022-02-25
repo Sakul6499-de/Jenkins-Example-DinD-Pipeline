@@ -8,7 +8,7 @@ pipeline {
                   containers:
                   - name: docker
                     image: docker
-                    command: cat
+                    command: ["cat"]
                     tty: true  
                     volumeMounts:
                     - name: docker-sock
